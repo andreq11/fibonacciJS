@@ -3,14 +3,13 @@
 var n = Number(prompt("enter the number Fibonacci"));
 
 function f(n) {
-      var a = 1,
-          b = 1;
-      for (var i = 3; i <= n; i++) {
-        var c = a + b;
-            a = b;
-            b = c;
-      }
-      return b;
+    var x1 = 1,
+        x2 = 1;
+    for (var i = 3; i <= n; i++) {
+        var x = x1 + x2;
+        x1 = x2;
+        x2 = x;
     }
-    document.write('number Fibonacci = ' + f(n));
-    
+    return x2;
+}
+document.write('number Fibonacci = ' + f(n));
